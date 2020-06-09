@@ -12,7 +12,7 @@ However, the following (surprisingly) succeeds:
 
 I would expect `make run_1` to complain about missing symbols due to the circular references between foo and bar. What gives?
 
-This succeed with both clang on macos and gcc on debian:
+This succeeds with both clang on macos and gcc on debian:
 
 clang on mac: 
 
