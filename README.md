@@ -3,7 +3,7 @@ Since foo and bar have circular references between each other, I expected to hav
     # make run_2
     $(CC) ${BUILD_DIR}/main.o -L${OUT_DIR}/lib/ -lfoo -lbar -lfoo -lbar -o ${OUT_DIR}/bin/app1
     # or this:
-    $(CC) ${BUILD_DIR}/main.o -L${OUT_DIR}/lib/ "-Wl,--start-group" -lfoo -lbar -lfoo -lbar -"Wl,--end-group" -o ${OUT_DIR}/bin/app1
+    $(CC) ${BUILD_DIR}/main.o -L${OUT_DIR}/lib/ "-Wl,--start-group" -lfoo -lbar "-Wl,--end-group" -o ${OUT_DIR}/bin/app1
 
 However, the following (surprisingly) succeeds:
   
